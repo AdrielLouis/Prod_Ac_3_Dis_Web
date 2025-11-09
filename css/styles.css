@@ -1,0 +1,349 @@
+/* ==============================
+   ESTILOS GENERALES
+============================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ==============================
+   HEADER Y NAVEGACIÓN
+============================== */
+header {
+    background-color: #0066cc;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover,
+nav a.activo {
+    background-color: #005fa3;
+    border-radius: 5px;
+}
+
+/* ==============================
+   MAIN SECTIONS
+============================== */
+main {
+    padding: 20px;
+}
+
+/* Introducción */
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Imagen destacada con animación */
+.imagen-destacada,
+.svg {
+    text-align: center;
+    margin: 20px 0;
+}
+
+img.zoom {
+    width: 80%;
+    border-radius: 10px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+img.zoom:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* ==============================
+   TABLAS
+============================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #0066cc;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+/* ==============================
+   FORMULARIO
+============================== */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea, button {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+}
+
+/* ==============================
+   CARDS / ANIMACIONES
+============================== */
+.card {
+    width: 250px;
+    margin: 30px auto;
+    background-color: #0066cc;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    background-color: #004c99;
+}
+
+/* ==============================
+   SVG
+============================== */
+.svg svg {
+    margin-top: 20px;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 40px;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 800px) {
+    img.zoom {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+img.zoom {
+    width: 40%; /* Antes estaba 80%, ahora más pequeña */
+    border-radius: 10px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Estilo para títulos h2 */
+h2 {
+    text-align: center;          /* Centra el texto */
+    font-size: 2em;              /* Tamaño más grande */
+    color: #0066cc;              /* Color principal */
+    margin: 20px 0;              /* Espacio arriba y abajo */
+    font-weight: bold;           /* Negrita */
+    text-transform: uppercase;   /* Letras mayúsculas */
+    letter-spacing: 2px;         /* Espacio entre letras */
+    position: relative;          /* Para decorar con pseudo-elemento */
+}
+
+/* Línea decorativa debajo del título */
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #0066cc;
+    margin: 10px auto 0 auto;   /* Centra la línea debajo del título */
+    border-radius: 2px;
+}
+/* Sección de habilidades centrada */
+section h2 {
+    text-align: center;          /* Centra el título */
+    font-size: 1.8em;            /* Tamaño del título */
+    color: #0066cc;              /* Color principal */
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+/* Línea decorativa debajo del título */
+section h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #0066cc;
+    margin: 8px auto 0 auto;    /* Centra la línea */
+    border-radius: 2px;
+}
+
+/* Lista centrada y bonita */
+section ul {
+    list-style: none;            /* Quita los bullets */
+    text-align: center;          /* Centra los items */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 400px;            /* Ancho máximo de la lista */
+}
+
+section ul li {
+    background-color: #e0f0ff;  /* Color de fondo suave */
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 10px;         /* Bordes redondeados */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+section ul li:hover {
+    transform: scale(1.05);
+    background-color: #cce6ff;
+}
+/* Sección "Quién soy" centrada */
+.quien-soy {
+    text-align: center;        /* Centra el contenido */
+    max-width: 800px;          /* Ancho máximo para el párrafo */
+    margin: 30px auto;         /* Centra la sección verticalmente */
+}
+
+.quien-soy h2 {
+    font-size: 2em;
+    color: #0066cc;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+/* Línea decorativa debajo del título */
+.quien-soy h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #0066cc;
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+}
+
+.quien-soy p {
+    font-size: 1.1em;
+    line-height: 1.8;  
+    color: #333;
+    margin-top: 10px;
+}
+
+.svg {
+    text-align: center;
+    margin: 0px 0;
+}
+
+.svg h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #0066cc;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.svg img.logo-svg {
+    width: 400px;      
+    height: 400x;     
+    margin-top: 10px;
+    transition: transform 0.5s ease;
+}
+
+.svg img.logo-svg:hover {
+    transform: scale(1.1); 
+}
+
