@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sitio web demostrativo con HTML5 y CSS3">
-    <meta name="author" content="Tu Nombre">
+    <meta name="author" content="Adriel Louis">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
     <title>Mi Sitio Web Interactivo</title>
 </head>
 <body>
     <header>
+        <div class="cart-counter">
+         <img src="/img/carrito.png" alt="Carrito" class="cart-icon">
+         <span id="count">0</span>
+        </div>
         <h1>Producto Academico N° 02</h1>
+        <button class="theme-btn" id="themeToggle">🌓</button>
         <nav>
             <ul>
                 <li><a href="index.html" class="activo">Inicio</a></li>
@@ -20,10 +25,9 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="intro">
-            <h2>Explora el poder de HTML5 y CSS3</h2>
+            <h2>Explora el poder de HTML5, CSS3 y JS</h2>
             <p>En este sitio encontrarás ejemplos de imágenes interactivas, animaciones y diseños responsivos.</p>
         </section>
 
@@ -33,7 +37,6 @@
                 
             </figure>
         </section>
-
         <section class="tabla">
             <h2>Servicios</h2>
             <table>
@@ -41,23 +44,26 @@
                     <th>Servicio</th>
                     <th>Descripción</th>
                     <th>Precio</th>
+                    <th>Agregar</th>
                 </tr>
                 <tr>
                     <td>Diseño Web</td>
                     <td>Sitios modernos y adaptativos</td>
                     <td>S/.100</td>
+                    <td><button onclick="agregarAlCarrito(0)">🛒</button></td>
                 </tr>
                 <tr>
                     <td>Reparación PC</td>
                     <td>Mantenimiento y optimización</td>
                     <td>S/.50</td>
+                    <td><button onclick="agregarAlCarrito(1)">🛒</button></td>
                 </tr>
             </table>
         </section>
     </main>
-
     <footer>
         <p>&copy; 2025 Producto Academico N° 02. Todos los derechos reservados.</p>
     </footer>
 </body>
+<script src="js/main.js"></script>
 </html>
